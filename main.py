@@ -1,5 +1,5 @@
 import sensor as data
-from flask import Flask
+from flask import Flask, jsonify
 from flask_restful import Api, Resource
 from flask_cors import CORS, cross_origin
 import json
@@ -12,7 +12,7 @@ api = Api(app)
 
 class tempretureHumidity(Resource):
     def get(self):
-        return json.load(data.getInfo())
+        return jsonify(data.getInfo())
 
 api.add_resource(tempretureHumidity, "/info")
 
