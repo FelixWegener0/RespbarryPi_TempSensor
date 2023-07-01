@@ -12,7 +12,7 @@ api = Api(app)
 
 class tempretureHumidity(Resource):
     def get(self):
-        return data.getInfo()
+        return json.load(data.getInfo())
 
 api.add_resource(tempretureHumidity, "/info")
 
