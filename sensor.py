@@ -9,6 +9,6 @@ def getInfo():
     sleep(1.5)
 
     if humidity is not None and temperature is not None:
-        return { temperature, humidity }
+        return temperature
     else:
-        return { 0, 0 }
+        return 0

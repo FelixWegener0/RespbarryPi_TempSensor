@@ -13,8 +13,13 @@ api = Api(app)
 class tempretureHumidity(Resource):
     def get(self):
         return jsonify(data.getInfo())
+    
+class testConnection(Resource):
+    def get(self):
+        return jsonify('test_Connection')
 
 api.add_resource(tempretureHumidity, "/info")
+api.add_resource(testConnection, "/testConnect")
 
 if (__name__ == "__main__"):
-    app.run(host='192.168.178.48', debug=False)
+    app.run(host='192.168.178.48', debug=True)
