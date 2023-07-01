@@ -10,15 +10,20 @@ cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 api = Api(app)
 
-class tempretureHumidity(Resource):
+class temperature(Resource):
     def get(self):
-        return jsonify(data.getInfo())
-    
+        return jsonify(data.getTemperature())
+
+class humidity(Resource):
+    def get(self):
+        return jsonify(data.getHumidity())
+
 class testConnection(Resource):
     def get(self):
         return jsonify('test_Connection')
 
-api.add_resource(tempretureHumidity, "/info")
+api.add_resource(temperature, "/temp")
+api.add_resource(humidity, "/humidity")
 api.add_resource(testConnection, "/testConnect")
 
 if (__name__ == "__main__"):
