@@ -17,4 +17,4 @@ class tempretureHumidity(Resource):
 api.add_resource(tempretureHumidity, "/info")
 
 if (__name__ == "__main__"):
-    app.run(host='0.0.0.0', debug=False)
+    app.run(host='192.168.178.48', debug=False)
