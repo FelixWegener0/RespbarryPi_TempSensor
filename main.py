@@ -27,4 +27,4 @@ api.add_resource(humidity, "/humidity")
 api.add_resource(testConnection, "/testConnect")
 
 if (__name__ == "__main__"):
-    app.run(host='192.168.178.48', debug=True)
+    app.run(host='0.0.0.0')
