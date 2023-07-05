@@ -1,10 +1,11 @@
-# Temperatur Sensor
+### Server: ResparryPi with DHT11 temperature sensor
 
-## der Sensor soll über eine api schnittstelle ausgelsen werden können
+## to run the project
 
-### Sensor: DHT11
+- to install run 'sudo pip3 install -r requirements.txt' in the root of this project
+- to start the project run 'python3 main.py'
 
-### Server: ResparryPi
+## current functions
 
-to install run 'sudo pip3 install -r requirements.txt' in the root of this project
-to start the project run 'python3 main.py'
+- reads temperature and air humidity with DHT11 sensor
+- data can be fetchd via api connection
